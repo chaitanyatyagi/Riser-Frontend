@@ -11,6 +11,7 @@ export default function IndividualProduct(props) {
                     <div className="insmain-right-description">{props.elem.description}</div>
                     <div className="insmain-right-count">Count - {props.elem.rating.count}</div>
                     <div className="insmain-right-price">Price - Rs {props.elem.price}</div>
+                    <div className="insmain-right-price">Rating - Rs {props.elem.rating.rate}</div>
                     <Link to="/products" className="insmain-right-btn" >Back</Link>
                 </div>
             </div>
