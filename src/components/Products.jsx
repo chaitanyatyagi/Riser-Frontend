@@ -9,7 +9,7 @@ export default function Products(props) {
     const [rating, setRating] = useState(5)
 
     useEffect(() => {
-        axios.get(`http://localhost:5800/products/get-products`).then((res) => {
+        axios.get(`https://riser-backend.onrender.com/products/get-products`).then((res) => {
             setProducts(res.data.products)
         }).catch((err) => {
             console.log(err)
@@ -23,7 +23,7 @@ export default function Products(props) {
             price: price,
             rating: rating
         }
-        axios.post(`http://localhost:5800/products/get-products/filters`, payload).then((res) => {
+        axios.post(`https://riser-backend.onrender.com/products/get-products/filters`, payload).then((res) => {
             setProducts(res.data.products)
         }).catch((err) => {
             console.log(err)

@@ -35,7 +35,7 @@ function App() {
 
   const [product, setProducts] = useState([])
   useEffect(() => {
-    axios.get("http://localhost:5800/products/get-products").then((res) => {
+    axios.get("https://riser-backend.onrender.com/products/get-products").then((res) => {
       setProducts(res.data.products)
     }).catch((err) => {
       console.log(err)

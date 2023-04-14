@@ -13,7 +13,7 @@ export default function Register() {
             email: e.target[2].value,
             password: e.target[3].value
         }
-        axios.post("http://localhost:5800/auth/register", payload).then((response) => {
+        axios.post("https://riser-backend.onrender.com/auth/register", payload).then((response) => {
             if (response.data.status == "success") {
                 toast(response.data.message)
                 window.open("/login", "_self")

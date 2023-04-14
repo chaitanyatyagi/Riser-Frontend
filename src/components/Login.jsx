@@ -14,7 +14,7 @@ export default function Login() {
             email: e.target[0].value,
             password: e.target[1].value
         }
-        axios.post("http://localhost:5800/auth/login", payload).then((response) => {
+        axios.post("https://riser-backend.onrender.com/auth/login", payload).then((response) => {
             console.log(123)
             if (response.data.status == "success") {
                 cookie.set('jwt', response.data.token, { path: '/' });
